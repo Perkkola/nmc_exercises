@@ -1,14 +1,14 @@
 import numpy as np
 from numpy.typing import NDArray
-from exercise_7.naive_schur_complement_7_i import naive_schur_complement
 
-def linear_eq_schur_complement(A: NDArray):
-    n = A.shape[0] // 2
+def linear_eq_schur_complement(A: NDArray, n1: int | None = None):
+    n = A.shape[0]
+    n1 = n // 2 if n1 is None else n1
     # Partition the matrix
-    A_11 = A[:n, :n]
-    A_12 = A[:n, n:]
-    A_21 = A[n:, :n]
-    A_22 = A[n:, n:]
+    A_11 = A[:n1, :n1]
+    A_12 = A[:n1, n1:]
+    A_21 = A[n1:, :n1]
+    A_22 = A[n1:, n1:]
 
     # Compute A_11^{-1} @ A_12
     sol = np.linalg.solve(A_11, A_12)

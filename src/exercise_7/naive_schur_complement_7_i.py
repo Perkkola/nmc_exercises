@@ -2,13 +2,14 @@ import numpy as np
 from numpy.typing import NDArray
 
 
-def naive_schur_complement(A: NDArray):
-    n = A.shape[0] // 2
+def naive_schur_complement(A: NDArray, n1: int | None = None):
+    n = A.shape[0]
+    n1 = n // 2 if n1 is None else n1
     # Partition the matrix
-    A_11 = A[:n, :n]
-    A_12 = A[:n, n:]
-    A_21 = A[n:, :n]
-    A_22 = A[n:, n:]
+    A_11 = A[:n1, :n1]
+    A_12 = A[:n1, n1:]
+    A_21 = A[n1:, :n1]
+    A_22 = A[n1:, n1:]
 
     # Compute the inverse of A_11
     A_11_inv = np.linalg.inv(A_11)
@@ -26,4 +27,3 @@ if __name__ == "__main__":
     np.fill_diagonal(A, mx)
 
     S = naive_schur_complement(A)
-    print(S)
