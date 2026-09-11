@@ -4,10 +4,10 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.linalg import lu_factor, lu_solve
 
-from exercise_7.make_schur_system import make_schur_system
-from exercise_7.naive_schur_complement_7_i import naive_schur_complement
-from exercise_7.linear_eq_schur_complement_7_ii import linear_eq_schur_complement
-from exercise_7.partial_gauss_schur_complement_7_iii import partial_gauss_schur_complement
+from src.week_1.exercise_7.make_schur_system import make_schur_system
+from src.week_1.exercise_7.naive_schur_complement_7_i import naive_schur_complement
+from src.week_1.exercise_7.linear_eq_schur_complement_7_ii import linear_eq_schur_complement
+from src.week_1.exercise_7.partial_gauss_schur_complement_7_iii import partial_gauss_schur_complement
 
 def scipy_partial_gauss_schur_complement(A: NDArray, n1: int):
     n = A.shape[0]

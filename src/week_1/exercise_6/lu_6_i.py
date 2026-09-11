@@ -1,6 +1,6 @@
 import numpy as np
 from numpy.typing import NDArray
-from exercise_5.generate_random_morally_triangular_matrices_5_i import generate_random_morally_triangular_matrices
+from src.week_1.exercise_5.generate_random_morally_triangular_matrices_5_i import generate_random_morally_triangular_matrices
 
 def lu_decomposition(A: NDArray, n: int, offset: int = 0):
     P_T = np.eye(n)

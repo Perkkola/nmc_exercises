@@ -1,7 +1,7 @@
 import numpy as np
 from numpy.typing import NDArray
 from scipy.linalg import solve_triangular
-from exercise_6.lu2_6_ii import lu_decomposition
+from src.week_1.exercise_6.lu2_6_ii import lu_decomposition
 
 
 def partial_gauss_schur_complement(A: NDArray, n1: int | None = None):

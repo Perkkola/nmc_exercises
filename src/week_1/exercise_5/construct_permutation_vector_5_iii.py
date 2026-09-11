@@ -1,5 +1,5 @@
 import numpy as np
-from exercise_5.generate_random_morally_triangular_matrices_5_i import generate_random_morally_triangular_matrices
+from src.week_1.exercise_5.generate_random_morally_triangular_matrices_5_i import generate_random_morally_triangular_matrices
 from numpy.typing import NDArray
 
 # Permutes the indices of a list in place using XOR
