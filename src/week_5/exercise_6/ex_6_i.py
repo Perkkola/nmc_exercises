@@ -24,3 +24,4 @@ if __name__ == "__main__":
     X = np.random.rand(n, k)
 
     P = gsA(A, X)
+
